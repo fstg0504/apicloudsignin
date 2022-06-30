@@ -1,5 +1,14 @@
 const https = require('https');
 const { userConfig, API } = require('./appConfig.js');
+const log4js = require('log4js');
+const { userConfig, API } = require('./appConfig.js');
+
+log4js.configure({
+    appenders: { cheese: { type: "file", filename: "cheese.log" } },
+    categories: { default: { appenders: ["cheese"], level: "error" } }
+});
+var logger = log4js.getLogger();
+logger.level = "INFO";
 
 // 格式化返回的参数 对json格式的数据进行格式化
 function formatResData(data, headers) {
@@ -56,5 +65,5 @@ post(API.checkin, '', headers).then(res => {
     // res.statusCode为接口返回的状态码， res.data为接口返回的数据
     console.log(res.statusCode, res.data);
 }).catch(err => {
-    console.log(50, err);
+    logger.info(res.data);
 })
