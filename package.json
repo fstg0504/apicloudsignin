@@ -1,0 +1,22 @@
+{
+  "name": "apicloudsignin",
+  "version": "1.0.0",
+  "description": "apicloud自动签到功能",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fstg0504/apicloudsignin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fstg0504/apicloudsignin/issues"
+  },
+  "homepage": "https://github.com/fstg0504/apicloudsignin#readme",
+  "dependencies": {
+    "log4js": "^6.5.2"
+  }
+}
