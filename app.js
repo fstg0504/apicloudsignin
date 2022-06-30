@@ -1,4 +1,5 @@
 const https = require('https');
+const { userConfig, API } = require('./appConfig.js');
 const log4js = require('log4js');
 const { userConfig, API } = require('./appConfig.js');
 
@@ -63,7 +64,6 @@ let headers = {
 post(API.checkin, '', headers).then(res => {
     // res.statusCode为接口返回的状态码， res.data为接口返回的数据
     console.log(res.statusCode, res.data);
-    logger.info(res.data);
 }).catch(err => {
-    logger.error(err);
+    logger.info(res.data);
 })
